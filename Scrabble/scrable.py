@@ -4,9 +4,12 @@ import io
 def associer_valeur(ligne):
     d_lettre_valeur = {} # dict
     d_lettre_valeur = {ligne}
+    d_lettre_valeur = {ligne.split(" ")}
+    t_lettre_valeur = []
+    t_lettre_valeur = [ligne]
 
     
-    return d_lettre_valeur # dict
+    return (t_lettre_valeur) # dict
 
 
 def calcul_score(mot, valeurs_lettres):
