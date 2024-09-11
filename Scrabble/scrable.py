@@ -2,21 +2,22 @@ import io
 
 
 def associer_valeur(ligne):
-    d_lettre_valeur = {} # dict
-    d_lettre_valeur = {ligne}
-    d_lettre_valeur = {ligne.split(" ")}
-    t_lettre_valeur = []
-    t_lettre_valeur = [ligne]
 
-    
-    return (t_lettre_valeur) # dict
+    d_lettre_valeur = {}
+    liste_score = ligne.split(" ")
+    for i in range (0,len(liste_score)-1,2):
+        d_lettre_valeur[liste_score[i]]=int(liste_score[i+1])
+    return d_lettre_valeur
+
 
 
 def calcul_score(mot, valeurs_lettres):
     score = 0
-    for i in mot :
-        associer_valeur(i)
-        score += valeurs_lettres
+    for i in mot:
+        try :
+            score += valeurs_lettres[i]
+        except:
+            score+=0
     return score
 
 def readData(chemin, mode):
