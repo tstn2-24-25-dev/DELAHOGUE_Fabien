@@ -22,13 +22,12 @@ def calcul_score(mot, valeurs_lettres):
 
 def readData(chemin, mode):
     # create a multi-line string and pass it into StringIO
-    return io.StringIO('''a 1 b 3 c 3 d 2 e 1 f 4 g 2 u 1
-cafe
-button
-face
-bad
-zebra
-bug''')
+    return io.StringIO('''p 7 r 8 f 7 i 2 m 1 e 3 u 2 s 9 c 3 
+primeur
+semeur
+escrime
+frimeur
+ruer''')
 
 """
 1: lecture des données
