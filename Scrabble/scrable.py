@@ -71,4 +71,3 @@ def scrabble(chemin_fichier):
     affichage(liste_classee) # 4
 
 
-scrabble('data.txt')
