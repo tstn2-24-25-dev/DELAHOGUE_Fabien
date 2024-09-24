@@ -13,35 +13,22 @@ def indiceMin (tab,j):
 print("élément et indice min :", indiceMin(tab,j))
 
 
-def triSelection(tab):
-    i = 0
-    m = 0
-    while (i <= len(tab)-2):
-        if tab[i] > tab[i+1]:
-            m = tab[i+1]
-            tab[i+1] = tab[i]
-            tab[i] = m
+def tri_selection(tab):
+    
+    for i in range(len(tab)):
+       m = i
+       
+       for j in range(i+1, len(tab)):
+           
+           if tab[m] > tab[j]:
+               m = j
+                
+       v = tab[i]
+       tab[i] = tab[m]
+       tab[m] = v
 
-        if(tab[i-1] > tab[1]):
-            m = tab[i]
-            tab[i] = tab[i-1]
-            tab[i-1] = m
-            i = i+1
-
-        else:
-            i+= 1
-
-    return(tab)
+    return tab
 
 
 
-    # m = 0
-    # for i in range(len(tab)-1):
-    #     if tab[i] > tab[i+1]:
-    #         m = tab[i+1]
-    #         tab[i+1] = tab[i]
-    #         tab[i] = m
-            
-    # return (tab)
-
-print(triSelection(tab))
+print(tri_selection(tab))
