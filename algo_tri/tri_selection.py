@@ -13,7 +13,7 @@ def indiceMin (tab,j):
 print("élément et indice min :", indiceMin(tab,j))
 
 
-def tri_selection(tab):
+def triSelection(tab):
     
     for i in range(len(tab)):
        m = i
